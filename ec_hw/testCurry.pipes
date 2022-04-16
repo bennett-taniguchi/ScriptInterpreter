@@ -1,0 +1,7 @@
+pipeline fraction = arithmetic / left right quotient | project quotient ;
+pipeline testCurry = 
+    arithmetic * 1_first _second 9_mult |
+    arithmetic / 9_mult third div |
+    arithmetic % fourth 1_first rem |
+    project 9_mult div rem ;
+pipeline fraction = arithmetic / left right quotient | project quotient ;

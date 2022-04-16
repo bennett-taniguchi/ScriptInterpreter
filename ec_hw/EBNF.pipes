@@ -1,0 +1,7 @@
+identifier = letter , { letter | digit | "_" } ;
+arithmetic_op = "arithmetic" , cell_op , identifier, identifier, identifier ;
+cell_op = "+" | "-" | "*" | "/" | "%" ;
+project_op = "project" , identifier , { identifier } ;
+operation = arithmetic_op | project_op ;
+pipeline_def = "pipeline" , identifier , "=" , operation , { "|" , operation } , ";";
+program = pipeline_def , { pipeline_def } ;
